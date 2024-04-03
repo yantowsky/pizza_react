@@ -9,7 +9,6 @@ const Header = () => {
             <nav className="header__nav">
                 <NavLink className="header_link" to='/login'>Login</NavLink>
                 <NavLink className="header_link" to='/menu'>Menu</NavLink>
-
             </nav>
         </header>
     );

@@ -3,7 +3,7 @@ import { Route, Routes } from 'react-router-dom';
 import Header from './components/Header/Header.jsx';
 import Main from './pages/Main.jsx';
 import Login from './pages/Login.jsx';
-import Menu from './pages/Menu.jsx';
+import Menu from './pages/Menu/Menu.jsx';
 
 function App() {
     return (
