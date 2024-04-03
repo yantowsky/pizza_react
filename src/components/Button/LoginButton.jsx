@@ -4,11 +4,11 @@ import { FullNameContext } from "../Form/Form";
 
 const LoginButton = () => {
     const navigate = useNavigate();
-    const isFullName = useContext(FullNameContext);
+    const isFullName = useContext(FullNameContext).trim();
 
     const handleRedirectUser = (event) => {
         event.preventDefault();
-        if (!isFullName.trim()) {
+        if (!isFullName) {
             alert("Enter your full name");
         } else {
             console.log(`Your full name: ${isFullName}`);
