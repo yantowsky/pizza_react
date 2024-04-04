@@ -1,18 +1,16 @@
-import { createContext, useState } from "react";
+import { useContext } from "react";
+import { AuthContext } from "../../contexts/AuthUser.jsx";
 import Input from "../Input/Input.jsx"
-import LoginButton from "../Button/LoginButton.jsx";
-
-export const FullNameContext = createContext();
+import Button from "../Button/Button.jsx"
 
 const Form = () => {
-    const [isFullName, setIsFullName] = useState("");
-    
+
+    const { isFullName, setIsFullName, handleRedirectUser } = useContext(AuthContext);
+
     return (
-        <form className="login-form" method="get">
-            <FullNameContext.Provider value={isFullName}>
-                <Input type="text" placeholder="Your full name" value={isFullName} onChange={e => setIsFullName(e.target.value)} />
-                <LoginButton />
-            </FullNameContext.Provider>
+        <form className="login-form">
+            <Input type="text" placeholder="Your full name" value={isFullName} onChange={e => setIsFullName(e.target.value)} />
+            <Button text="Login" type="submit" onClick={handleRedirectUser} />
         </form>
     );
 }
