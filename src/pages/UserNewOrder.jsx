@@ -3,7 +3,7 @@ import * as Yup from 'yup';
 import "yup-phone-lite";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
-import Button from '../Button/Button';
+import Button from '../components/Button/Button.jsx';
 
 const basicSchema = Yup.object().shape({
     firstName: Yup.string().trim().matches(/^([^0-9]*)$/gm, "Letters only").required("A first name is required"),
