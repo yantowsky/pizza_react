@@ -1,15 +1,9 @@
 import React from 'react';
-import * as Yup from 'yup';
 import "yup-phone-lite";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import Button from '../components/Button/Button.jsx';
-
-const basicSchema = Yup.object().shape({
-    firstName: Yup.string().trim().matches(/^([^0-9]*)$/gm, "Letters only").required("A first name is required"),
-    phoneNum: Yup.string().phone("UA", "Please enter a valid phone number").required("A phone number is required"),
-    address: Yup.string().trim().max(50, "Maximum number of characters exceeded").required("An address is required")
-});
+import basicSchema from '../schemes/schemas.jsx';
 
 const UserNewOrder = () => {
     const { register, handleSubmit, formState: { errors }, reset } = useForm({
