@@ -9,8 +9,10 @@ const useFetch = (url) => {
         const getDate = async () => {
             try {
                 setIsLoading(true);
-                setError("");
                 const response = await fetch(url);
+                if (!response.ok) {
+                    throw new Error("Failed to fetch")
+                }
                 const data = await response.json();
                 setData(data);
             } catch (error) {
