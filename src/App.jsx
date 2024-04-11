@@ -6,6 +6,7 @@ import Main from './pages/Main.jsx';
 import Login from './pages/Login.jsx';
 import Menu from './pages/Menu/Menu.jsx';
 import Fetch from './pages/Fetch.jsx';
+import Counter from './pages/Counter.jsx';
 
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
                 <Route path='/menu' element={<Menu />} />
                 <Route path='/order/new' element={<UserNewOrder />} />
                 <Route path='/fetch' element={<Fetch />} />
+                <Route path='/counter' element={<Counter/>} />
             </Routes>
         </div>
     );
