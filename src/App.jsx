@@ -2,7 +2,7 @@ import './App.css';
 import { Suspense, lazy } from 'react';
 import { Route, Routes } from 'react-router-dom';
 
-import Header from './components/Header/Header.jsx';
+import Header from './components/Header/Header.jsx'
 
 const UserNewOrderLazy = lazy(() => import('./pages/UserNewOrder.jsx'));
 const MainLazy = lazy(() => import('./pages/Main.jsx'));
